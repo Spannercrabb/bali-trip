@@ -247,6 +247,40 @@
     margin: 4px 0;
   }
 
+  .timeline-title a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+  }
+
+  .timeline-title a:hover {
+    color: var(--accent);
+  }
+
+  .timeline-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .timeline-links a {
+    background: var(--card-alt);
+    color: var(--accent);
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.78em;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+
+  .timeline-links a:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
   .timeline-desc {
     color: var(--text-dim);
     font-size: 0.9em;
@@ -609,83 +643,156 @@
   <div class="timeline">
     <div class="timeline-item">
       <div class="timeline-date">Apr 9 (Thu)</div>
-      <div class="timeline-title">Arrive Bali <span class="leg-badge leg1">Leg 1</span></div>
-      <div class="timeline-desc">Land DPS, Grab to Canggu, drop wedding gear at Bali Safe Storage, check into villa</div>
+      <div class="timeline-title"><a href="#leg1">Arrive Bali</a> <span class="leg-badge leg1">Leg 1</span></div>
+      <div class="timeline-desc">Land DPS, Grab to Canggu, drop wedding gear at storage, check into Aston Canggu</div>
+      <div class="timeline-links">
+        <a href="#leg1-options">Canggu Hotel (Booked)</a>
+        <a href="https://maps.google.com/?q=Bali+Safe+Storage+Canggu" target="_blank">Bali Safe Storage</a>
+        <a href="#transport">Transport Guide</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 10 (Fri)</div>
-      <div class="timeline-title">Transit to Java</div>
+      <div class="timeline-title"><a href="#transport">Transit to Java</a></div>
       <div class="timeline-desc">Private driver to Gilimanuk (~4hrs), ferry to Java, drive to Ijen area</div>
+      <div class="timeline-links">
+        <a href="#leg1-options">Ijen Hotels</a>
+        <a href="#transport">Canggu &rarr; Ijen Transport</a>
+        <a href="https://maps.google.com/?q=Gilimanuk+Ferry+Terminal+Bali" target="_blank">Ferry Terminal</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 11 (Sat)</div>
-      <div class="timeline-title">Kawah Ijen Blue Flame Trek</div>
+      <div class="timeline-title"><a href="#leg1">Kawah Ijen Blue Flame Trek</a></div>
       <div class="timeline-desc">Midnight start, trek to crater, blue flames until ~4:30am, sunrise over turquoise lake</div>
+      <div class="timeline-links">
+        <a href="https://maps.google.com/?q=Kawah+Ijen+Crater+Banyuwangi" target="_blank">Ijen Crater Map</a>
+        <a href="#packing">Packing List</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 12 (Sun)</div>
-      <div class="timeline-title">Bromo (optional) or Surabaya</div>
-      <div class="timeline-desc">Option A: Direct to Surabaya | Option B: Drive to Mt Bromo for sunrise jeep tour next morning</div>
+      <div class="timeline-title"><a href="#leg1-options">Bromo (optional) or Surabaya</a></div>
+      <div class="timeline-desc">Option A: Direct to Surabaya | Option B: Drive to Mt Bromo for sunrise jeep tour</div>
+      <div class="timeline-links">
+        <a href="#leg1-options">Bromo Hotels</a>
+        <a href="#leg1-options">Surabaya Hotels</a>
+        <a href="#transport">Ijen &rarr; Bromo/Surabaya Transport</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 13-15</div>
-      <div class="timeline-title">Surabaya & Madura Island</div>
-      <div class="timeline-desc">Explore city, Madura Island day trip (Jimmy Malay's origin per tombstone), House of Sampoerna, family history archives</div>
+      <div class="timeline-title"><a href="#leg1">Surabaya & Madura Island</a></div>
+      <div class="timeline-desc">Madura day trip (Jimmy Malay's origin per tombstone), House of Sampoerna, family archives</div>
+      <div class="timeline-links">
+        <a href="#leg1-options">Surabaya Hotels</a>
+        <a href="https://maps.google.com/?q=Suramadu+Bridge+Surabaya" target="_blank">Suramadu Bridge</a>
+        <a href="https://maps.google.com/?q=House+of+Sampoerna+Surabaya" target="_blank">House of Sampoerna</a>
+      </div>
     </div>
     <div class="timeline-item birthday">
       <div class="timeline-date">Apr 16 (Thu)</div>
-      <div class="timeline-title">Fly back to Bali — Dom's 33rd Birthday! <span class="leg-badge leg2">Leg 2</span></div>
+      <div class="timeline-title"><a href="#leg2">Fly back to Bali — Dom's 33rd Birthday!</a> <span class="leg-badge leg2">Leg 2</span></div>
       <div class="timeline-desc">Garuda SUB&rarr;DPS 9:20am. Collect wedding gear. Check into Theanna Kirana Villa</div>
+      <div class="timeline-links">
+        <a href="#leg2">Theanna Villa (Booked)</a>
+        <a href="https://maps.google.com/?q=Theanna+Eco+Villa+Spa+Canggu+Bali" target="_blank">Villa Map</a>
+        <a href="https://maps.google.com/?q=Bali+Safe+Storage+Canggu" target="_blank">Collect Gear</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 17 (Fri)</div>
-      <div class="timeline-title">Nusa Penida Day Tour</div>
-      <div class="timeline-desc">Fast boat from Sanur, Kelingking Beach, Angel's Billabong, Broken Beach, Crystal Bay. Full day trip</div>
+      <div class="timeline-title"><a href="#leg2">Nusa Penida Day Tour</a></div>
+      <div class="timeline-desc">Fast boat from Sanur, Kelingking Beach, Angel's Billabong, Broken Beach, Crystal Bay</div>
+      <div class="timeline-links">
+        <a href="#leg2">Tour Booking Links</a>
+        <a href="https://maps.google.com/?q=Sanur+Harbour+Bali" target="_blank">Sanur Harbour</a>
+        <a href="https://maps.google.com/?q=Kelingking+Beach+Nusa+Penida" target="_blank">Kelingking Beach</a>
+        <a href="https://maps.google.com/?q=Crystal+Bay+Nusa+Penida" target="_blank">Crystal Bay</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 18-19</div>
-      <div class="timeline-title">Pre-Wedding</div>
+      <div class="timeline-title"><a href="#leg2">Pre-Wedding</a></div>
       <div class="timeline-desc">Wedding prep, explore Canggu, relax at villa, rehearsal dinner</div>
+      <div class="timeline-links">
+        <a href="https://maps.google.com/?q=Batu+Bolong+Beach+Canggu+Bali" target="_blank">Batu Bolong Beach</a>
+        <a href="https://maps.google.com/?q=Old+Mans+Canggu+Bali" target="_blank">Old Man's Bar</a>
+      </div>
     </div>
     <div class="timeline-item wedding">
       <div class="timeline-date">Apr 20 (Mon)</div>
-      <div class="timeline-title">WEDDING DAY</div>
+      <div class="timeline-title"><a href="#leg2">WEDDING DAY</a></div>
       <div class="timeline-desc">Belly's wedding near Canggu. Both groomsmen. Celebrate!</div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 21-25</div>
-      <div class="timeline-title">Holiday Inn Recovery</div>
+      <div class="timeline-title"><a href="#leg2">Holiday Inn Recovery</a></div>
       <div class="timeline-desc">Check into Holiday Inn (2 rooms). Beach at Batu Bolong, chill, recover</div>
+      <div class="timeline-links">
+        <a href="#leg2">Holiday Inn (Booked)</a>
+        <a href="https://maps.google.com/?q=Holiday+Inn+Resort+Bali+Canggu" target="_blank">Hotel Map</a>
+        <a href="https://maps.google.com/?q=Batu+Bolong+Beach+Canggu+Bali" target="_blank">Batu Bolong Beach</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 25-27</div>
-      <div class="timeline-title">Uluwatu <span class="leg-badge leg3">Leg 3</span></div>
+      <div class="timeline-title"><a href="#leg3">Uluwatu</a> <span class="leg-badge leg3">Leg 3</span></div>
       <div class="timeline-desc">Surf, cliffs, Kecak fire dance, beach clubs (with Buddha)</div>
+      <div class="timeline-links">
+        <a href="#leg3">Uluwatu Hotels (Mamo / Dreamsea)</a>
+        <a href="#transport">Canggu &rarr; Uluwatu Transport</a>
+        <a href="https://maps.google.com/?q=Single+Fin+Uluwatu+Bali" target="_blank">Single Fin</a>
+        <a href="https://maps.google.com/?q=Kecak+Fire+Dance+Uluwatu+Temple" target="_blank">Kecak Dance</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 27-29</div>
-      <div class="timeline-title">Canggu / Seminyak</div>
+      <div class="timeline-title"><a href="#leg3">Canggu / Seminyak</a></div>
       <div class="timeline-desc">Last days together. Chill, eat, drink (with Buddha)</div>
+      <div class="timeline-links">
+        <a href="#leg3">Seminyak Hotels</a>
+        <a href="https://maps.google.com/?q=Eat+Street+Jalan+Kayu+Aya+Seminyak+Bali" target="_blank">Eat Street</a>
+        <a href="https://maps.google.com/?q=La+Favela+Seminyak+Bali" target="_blank">La Favela</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 29</div>
-      <div class="timeline-title">Buddha flies home</div>
-      <div class="timeline-desc">Buddha &rarr; BNE. Dom flies to Maumere, Flores (solo heritage trip)</div>
+      <div class="timeline-title"><a href="#flores">Buddha flies home / Dom &rarr; Flores</a></div>
+      <div class="timeline-desc">Buddha &rarr; BNE (VA50, 3:15pm). Dom flies to Maumere, Flores</div>
+      <div class="timeline-links">
+        <a href="#transport">Flores Flights (Not Booked)</a>
+        <a href="#flores">Flores Itinerary</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">Apr 29 - May 6</div>
-      <div class="timeline-title">Flores — Solien Family Heritage</div>
+      <div class="timeline-title"><a href="#flores">Flores — Solien Family Heritage</a></div>
       <div class="timeline-desc">Maumere, Sikka, Larantuka, Solor & Adonara Islands. Tracing roots</div>
+      <div class="timeline-links">
+        <a href="#flores">Flores Hotels</a>
+        <a href="https://maps.google.com/?q=Maumere+Flores+Indonesia" target="_blank">Maumere</a>
+        <a href="https://maps.google.com/?q=Larantuka+Flores+Indonesia" target="_blank">Larantuka</a>
+        <a href="https://maps.google.com/?q=Fort+Henricus+Lohayong+Solor+Indonesia" target="_blank">Solor Fort</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">May 6-9</div>
-      <div class="timeline-title">Final Bali</div>
+      <div class="timeline-title"><a href="#flores">Final Bali</a></div>
       <div class="timeline-desc">Fly back from Maumere. Decompress, beach, prep for home</div>
+      <div class="timeline-links">
+        <a href="#flores">Final Bali Hotels (Canggu / Sanur / Ubud)</a>
+        <a href="#transport">Maumere &rarr; Bali Flights</a>
+      </div>
     </div>
     <div class="timeline-item">
       <div class="timeline-date">May 10 (Sun)</div>
-      <div class="timeline-title">Fly Home</div>
+      <div class="timeline-title"><a href="#budget">Fly Home</a></div>
       <div class="timeline-desc">Virgin DPS &rarr; BNE, departs 3:15pm</div>
+      <div class="timeline-links">
+        <a href="https://maps.google.com/?q=Ngurah+Rai+International+Airport+Bali" target="_blank">Airport Map</a>
+        <a href="#checklist">Final Checklist</a>
+      </div>
     </div>
   </div>
 </div>
