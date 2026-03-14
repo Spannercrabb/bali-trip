@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bali Trip — April 9 to May 10, 2026</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #1a2332;
+    --card-alt: #1e2a3a;
+    --accent: #00d4aa;
+    --accent2: #ff6b6b;
+    --accent3: #ffd93d;
+    --accent4: #6c5ce7;
+    --text: #e8eaed;
+    --text-dim: #8899aa;
+    --border: #2a3a4a;
+    --booked: #00d4aa;
+    --unbooked: #ff6b6b;
+    --optional: #ffd93d;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 0;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 50%, #0d7377 100%);
+    padding: 60px 24px 40px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent);
+  }
+
+  .hero h1 {
+    font-size: 2.4em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .hero .subtitle {
+    color: var(--accent);
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  .hero .meta {
+    color: var(--text-dim);
+    margin-top: 12px;
+    font-size: 0.95em;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+
+  /* Navigation */
+  .nav {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+    position: sticky;
+    top: 8px;
+    z-index: 100;
+  }
+
+  .nav h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    background: var(--card-alt);
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+
+  .nav-links a:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .section-header h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  .leg-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .leg-badge.leg1 { background: var(--accent4); color: white; }
+  .leg-badge.leg2 { background: var(--accent); color: var(--bg); }
+  .leg-badge.leg3 { background: var(--accent3); color: var(--bg); }
+
+  /* Cards */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+
+  .card h3 {
+    font-size: 1.15em;
+    margin-bottom: 8px;
+  }
+
+  .card p, .card li {
+    color: var(--text-dim);
+    font-size: 0.95em;
+  }
+
+  .card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .card ul li {
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .card ul li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  /* Status badges */
+  .status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+  }
+
+  .status.booked { background: rgba(0,212,170,0.15); color: var(--booked); border: 1px solid var(--booked); }
+  .status.unbooked { background: rgba(255,107,107,0.15); color: var(--unbooked); border: 1px solid var(--unbooked); }
+  .status.optional { background: rgba(255,217,61,0.15); color: var(--optional); border: 1px solid var(--optional); }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+  }
+
+  .timeline-item.wedding::before { background: var(--accent2); box-shadow: 0 0 8px var(--accent2); }
+  .timeline-item.birthday::before { background: var(--accent3); box-shadow: 0 0 8px var(--accent3); }
+
+  .timeline-date {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .timeline-title {
+    font-size: 1.05em;
+    font-weight: 600;
+    margin: 4px 0;
+  }
+
+  .timeline-desc {
+    color: var(--text-dim);
+    font-size: 0.9em;
+  }
+
+  /* Accommodation options */
+  .option-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .option {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .option:hover {
+    border-color: var(--accent);
+  }
+
+  .option.recommended {
+    border-color: var(--accent);
+    border-width: 2px;
+  }
+
+  .option.recommended::after {
+    content: 'RECOMMENDED';
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 2px 10px;
+    border-radius: 8px;
+    font-size: 0.7em;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+
+  .option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .option h4 {
+    font-size: 1.1em;
+  }
+
+  .price {
+    background: rgba(0,212,170,0.1);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95em;
+    white-space: nowrap;
+  }
+
+  .option .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0;
+  }
+
+  .feature-tag {
+    background: var(--card-alt);
+    color: var(--text-dim);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.8em;
+    border: 1px solid var(--border);
+  }
+
+  .option .book-links {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .book-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .book-btn.primary {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  .book-btn.primary:hover {
+    background: #00eebb;
+  }
+
+  .book-btn.secondary {
+    background: var(--card-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  .book-btn.secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.9em;
+  }
+
+  th {
+    background: var(--card-alt);
+    color: var(--accent);
+    text-align: left;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+
+  tr:hover td {
+    background: rgba(0,212,170,0.03);
+  }
+
+  th:first-child { border-radius: 8px 0 0 0; }
+  th:last-child { border-radius: 0 8px 0 0; }
+
+  /* Budget */
+  .budget-total {
+    background: linear-gradient(135deg, rgba(0,212,170,0.1), rgba(108,92,231,0.1));
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .budget-total .amount {
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .budget-total .label {
+    color: var(--text-dim);
+    font-size: 0.9em;
+    margin-top: 4px;
+  }
+
+  /* Checklist */
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .checklist-item:last-child {
+    border-bottom: none;
+  }
+
+  .check {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+  }
+
+  .check.done {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+
+  .check.done::after {
+    content: '\2713';
+    font-weight: bold;
+  }
+
+  .checklist-text {
+    font-size: 0.95em;
+  }
+
+  .checklist-text.done-text {
+    color: var(--text-dim);
+    text-decoration: line-through;
+  }
+
+  /* Info box */
+  .info-box {
+    background: rgba(108,92,231,0.1);
+    border: 1px solid var(--accent4);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 0.9em;
+  }
+
+  .info-box.warning {
+    background: rgba(255,107,107,0.1);
+    border-color: var(--accent2);
+  }
+
+  .info-box.tip {
+    background: rgba(0,212,170,0.08);
+    border-color: var(--accent);
+  }
+
+  .info-box strong {
+    color: var(--text);
+  }
+
+  /* Packing list */
+  .pack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .pack-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 0.9em;
+    color: var(--text-dim);
+  }
+
+  .pack-item::before {
+    content: '\25A2';
+    color: var(--accent);
+    font-size: 1.1em;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--text-dim);
+    font-size: 0.85em;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 1.8em; }
+    .nav-links { flex-direction: column; }
+    .option-header { flex-direction: column; }
+    .pack-grid { grid-template-columns: 1fr; }
+    .nav { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Bali & Beyond 2026</h1>
+  <div class="subtitle">Belly's Wedding Trip</div>
+  <div class="meta">April 9 - May 10 &middot; Dom & Buddha &middot; 31 days</div>
+</div>
+
+<div class="container">
+
+<!-- NAV -->
+<nav class="nav" id="top">
+  <h3>Jump to</h3>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#leg1">Leg 1: Java</a>
+    <a href="#leg1-options">Leg 1 Hotels</a>
+    <a href="#leg2">Leg 2: Wedding</a>
+    <a href="#leg3">Leg 3: Post-Wedding</a>
+    <a href="#flores">Flores Solo</a>
+    <a href="#budget">Budget</a>
+    <a href="#transport">Transport</a>
+    <a href="#sim">SIM Cards</a>
+    <a href="#packing">Packing</a>
+    <a href="#checklist">Checklist</a>
+  </div>
+</nav>
+
+<!-- OVERVIEW -->
+<div class="section" id="overview">
+  <div class="section-header">
+    <h2>Trip Overview</h2>
+  </div>
+
+  <div class="card">
+    <table>
+      <tr><td><strong>Dates</strong></td><td>April 9 - May 10, 2026 (31 days)</td></tr>
+      <tr><td><strong>Travelers</strong></td><td>Dom & Buddha (together until Apr 29, then Dom solo)</td></tr>
+      <tr><td><strong>Wedding</strong></td><td>Belly's wedding, April 20, near Canggu</td></tr>
+      <tr><td><strong>Dom's Birthday</strong></td><td>April 16 (turns 33, in Bali)</td></tr>
+      <tr><td><strong>Budget</strong></td><td>Mid-range (~$3,870-5,510 AUD per person total)</td></tr>
+      <tr><td><strong>Insurance</strong></td><td>Allianz Comprehensive — $242 AUD (PAID)</td></tr>
+      <tr><td><strong>Currency</strong></td><td>All prices in AUD | 1 USD ~ 1.40 AUD</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Flights <span class="status booked">All Booked</span></h3>
+    <table>
+      <thead>
+        <tr><th>Route</th><th>Date</th><th>Airline</th><th>Details</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>BNE &rarr; DPS</td><td>Apr 9</td><td>Virgin VA45</td><td>Departs 9:30am</td></tr>
+        <tr><td>SUB &rarr; DPS</td><td>Apr 16</td><td>Garuda</td><td>9:20am, $150 AUD (both)</td></tr>
+        <tr><td>DPS &rarr; BNE</td><td>May 10</td><td>Virgin</td><td>Departs 3:15pm</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-box warning">
+    <strong>No QLD motorcycle licence</strong> — Use Grab/Gojek only for transport. No scooter rentals.
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="section" id="timeline">
+  <div class="section-header">
+    <h2>Key Dates</h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 9 (Thu)</div>
+      <div class="timeline-title">Arrive Bali <span class="leg-badge leg1">Leg 1</span></div>
+      <div class="timeline-desc">Land DPS, Grab to Canggu, drop wedding gear at Bali Safe Storage, check into villa</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 10 (Fri)</div>
+      <div class="timeline-title">Transit to Java</div>
+      <div class="timeline-desc">Private driver to Gilimanuk (~4hrs), ferry to Java, drive to Ijen area</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 11 (Sat)</div>
+      <div class="timeline-title">Kawah Ijen Blue Flame Trek</div>
+      <div class="timeline-desc">Midnight start, trek to crater, blue flames until ~4:30am, sunrise over turquoise lake</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 12 (Sun)</div>
+      <div class="timeline-title">Bromo (optional) or Surabaya</div>
+      <div class="timeline-desc">Option A: Direct to Surabaya | Option B: Drive to Mt Bromo for sunrise jeep tour next morning</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 13-15</div>
+      <div class="timeline-title">Surabaya</div>
+      <div class="timeline-desc">Explore city, House of Sampoerna, Arab Quarter, family history archives</div>
+    </div>
+    <div class="timeline-item birthday">
+      <div class="timeline-date">Apr 16 (Thu)</div>
+      <div class="timeline-title">Fly back to Bali — Dom's 33rd Birthday! <span class="leg-badge leg2">Leg 2</span></div>
+      <div class="timeline-desc">Garuda SUB&rarr;DPS 9:20am. Collect wedding gear. Check into Theanna Kirana Villa</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 17-19</div>
+      <div class="timeline-title">Pre-Wedding Week</div>
+      <div class="timeline-desc">Wedding prep, explore Canggu, relax at villa, rehearsal dinner</div>
+    </div>
+    <div class="timeline-item wedding">
+      <div class="timeline-date">Apr 20 (Mon)</div>
+      <div class="timeline-title">WEDDING DAY</div>
+      <div class="timeline-desc">Belly's wedding near Canggu. Both groomsmen. Celebrate!</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 21-25</div>
+      <div class="timeline-title">Holiday Inn Recovery</div>
+      <div class="timeline-desc">Check into Holiday Inn (2 rooms). Beach at Batu Bolong, chill, recover</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 25-27</div>
+      <div class="timeline-title">Uluwatu <span class="leg-badge leg3">Leg 3</span></div>
+      <div class="timeline-desc">Surf, cliffs, Kecak fire dance, beach clubs (with Buddha)</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 27-29</div>
+      <div class="timeline-title">Canggu / Seminyak</div>
+      <div class="timeline-desc">Last days together. Chill, eat, drink (with Buddha)</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 29</div>
+      <div class="timeline-title">Buddha flies home</div>
+      <div class="timeline-desc">Buddha &rarr; BNE. Dom flies to Maumere, Flores (solo heritage trip)</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 29 - May 6</div>
+      <div class="timeline-title">Flores — Solien Family Heritage</div>
+      <div class="timeline-desc">Maumere, Sikka, Larantuka, Solor & Adonara Islands. Tracing roots</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 6-9</div>
+      <div class="timeline-title">Final Bali</div>
+      <div class="timeline-desc">Fly back from Maumere. Decompress, beach, prep for home</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 10 (Sun)</div>
+      <div class="timeline-title">Fly Home</div>
+      <div class="timeline-desc">Virgin DPS &rarr; BNE, departs 3:15pm</div>
+    </div>
+  </div>
+</div>
+
+<!-- LEG 1 -->
+<div class="section" id="leg1">
+  <div class="section-header">
+    <span class="leg-badge leg1">Leg 1</span>
+    <h2>Java Adventure — Apr 9-16</h2>
+  </div>
+
+  <div class="card">
+    <h3>The Plan</h3>
+    <p>Arrive Bali &rarr; 1 night Canggu (drop wedding gear at storage) &rarr; Ferry to Java &rarr; Kawah Ijen blue flame trek &rarr; Optional Mt Bromo sunrise &rarr; Surabaya sightseeing + family archives &rarr; Fly back to Bali Apr 16</p>
+  </div>
+
+  <!-- Day by day -->
+  <div class="card">
+    <h3>Day 1: April 9 (Thu) — Arrival</h3>
+    <ul>
+      <li>Arrive Bali (Ngurah Rai Airport) — eSIM already active</li>
+      <li>Grab to Canggu (~45 min - 1 hour)</li>
+      <li>Drop wedding gear at <strong>Bali Safe Storage</strong> (Jl. Raya Canggu No.165) — <a href="https://www.balisafestorage.id/" target="_blank" style="color:var(--accent)">balisafestorage.id</a> — WhatsApp: +62 811-3806-911</li>
+      <li>Check into 2-bedroom villa nearby</li>
+      <li>Dinner in Canggu (Old Man's, The Lawn, Batu Bolong area)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Day 2: April 10 (Fri) — Transit to Java</h3>
+    <ul>
+      <li>Check out, private driver to Gilimanuk ferry (~3.5-4 hrs, ~$77 AUD total)</li>
+      <li>Ferry Gilimanuk &rarr; Ketapang (30-45 min, $0.60/person)</li>
+      <li>Continue to Ijen area (~1.5 hrs)</li>
+      <li>Check into hotel near Ijen</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Day 3: April 11 (Sat) — Kawah Ijen Blue Flame Trek</h3>
+    <ul>
+      <li>Midnight pickup from hotel</li>
+      <li>Drive to Paltuding trailhead (~1 hr)</li>
+      <li>Trek to crater (3km, 1.5-2 hrs up)</li>
+      <li><strong>BLUE FLAMES visible until ~4:30 AM</strong></li>
+      <li>Sunrise over turquoise crater lake</li>
+      <li>Descend, return to hotel, rest</li>
+      <li>Afternoon: explore Banyuwangi or visit Jagir Waterfall</li>
+    </ul>
+    <div class="info-box tip">
+      <strong>Trek tips:</strong> Gas mask required (~$4.50 AUD rental). Bring warm layers (2,386m elevation), sturdy shoes, headlamp. Entrance ~$10-15 AUD.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Day 4: April 12 (Sun) — Bromo or Surabaya</h3>
+    <p style="margin-bottom:12px"><strong>Option A:</strong> Direct to Surabaya (train/bus/shuttle)</p>
+    <p><strong>Option B (recommended):</strong> Drive to Mt Bromo area (~5-6 hrs), rest for early morning sunrise jeep tour</p>
+  </div>
+
+  <div class="card">
+    <h3>Day 5: April 13 (Mon) — Bromo Sunrise or Surabaya</h3>
+    <ul>
+      <li><strong>If Bromo:</strong> 3am jeep to King Kong Hill viewpoint, sunrise over crater, climb 253 steps, then drive to Surabaya (~3-4 hrs)</li>
+      <li><strong>If Surabaya:</strong> Explore — House of Sampoerna, Submarine Monument, Arab Quarter</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Days 6-7: April 14-15 — Surabaya</h3>
+    <ul>
+      <li>City exploration: House of Sampoerna, Arab Quarter & Ampel Mosque, local markets</li>
+      <li>Family history archives at Jl. Jagir Wonokromo No. 350 (colonial records research)</li>
+      <li>Shopping, food, culture</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Day 8: April 16 (Thu) — Fly Back to Bali</h3>
+    <ul>
+      <li>Garuda SUB &rarr; DPS (9:20am, ~1 hr flight) <span class="status booked">Booked</span></li>
+      <li>Collect wedding gear from storage</li>
+      <li>Check into Theanna Kirana Villa</li>
+      <li>Dom's 33rd birthday!</li>
+    </ul>
+  </div>
+</div>
+
+<!-- LEG 1 OPTIONS -->
+<div class="section" id="leg1-options">
+  <div class="section-header">
+    <span class="leg-badge leg1">Leg 1</span>
+    <h2>Accommodation Options — Pick Together</h2>
+  </div>
+
+  <p style="color:var(--text-dim);margin-bottom:24px;">All prices split between 2. Click the booking links to check live availability for your dates.</p>
+
+  <!-- CANGGU -->
+  <h3 style="color:var(--accent);margin-bottom:16px;font-size:1.1em;">Canggu — April 9 (1 night)</h3>
+  <p style="color:var(--text-dim);margin-bottom:16px;font-size:0.9em;">Near Bali Safe Storage for wedding gear drop-off. Need 2 bedrooms.</p>
+
+  <div class="option-grid">
+    <div class="option recommended">
+      <div class="option-header">
+        <h4>Villa Puji</h4>
+        <span class="price">$102-146 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">2 Bedrooms</span>
+        <span class="feature-tag">Private Pool</span>
+        <span class="feature-tag">Kitchen</span>
+        <span class="feature-tag">WiFi</span>
+        <span class="feature-tag">Daily Housekeeping</span>
+        <span class="feature-tag">3 Bathrooms</span>
+      </div>
+      <p>Heart of Canggu, walking distance to Bali Safe Storage. 17-min walk from Berawa Beach. Best value for location.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/2-bedroom-villa-in-the-heart-of-canggu.html" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://www.agoda.com/2-bedroom-villa-in-the-heart-of-canggu/hotel/bali-id.html" target="_blank" class="book-btn secondary">Agoda</a>
+      </div>
+    </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4>Villa Kuncara</h4>
+        <span class="price">~$147 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">2 Bedrooms</span>
+        <span class="feature-tag">Indoor Pool</span>
+        <span class="feature-tag">King Beds</span>
+        <span class="feature-tag">Ensuite Bathrooms</span>
+      </div>
+      <p>Kayu Tulang Canggu, 7 min drive to Batu Bolong Beach. Slightly more upmarket, great landing pad.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/2-bedroom-villa-kuncara-with-private-pool-canggu.html" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://www.airbnb.com/rooms/594048729131927486" target="_blank" class="book-btn secondary">Airbnb</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box" style="margin-top:16px;">
+    <strong>Villa Sunrise</strong> ($224/night) ruled out — has a 3-night minimum in shoulder season.
+  </div>
+
+  <!-- IJEN -->
+  <h3 style="color:var(--accent);margin:28px 0 16px;font-size:1.1em;">Kawah Ijen — April 10-11 (2 nights)</h3>
+  <p style="color:var(--text-dim);margin-bottom:16px;font-size:0.9em;">Base for the midnight blue flame trek. Comfort matters — you'll need recovery.</p>
+
+  <div class="option-grid">
+    <div class="option recommended">
+      <div class="option-header">
+        <h4>Jiwa Jawa Resort Ijen</h4>
+        <span class="price">$104-164 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">Infinity Pool</span>
+        <span class="feature-tag">Breakfast Included</span>
+        <span class="feature-tag">Mountain Views</span>
+        <span class="feature-tag">Balconies</span>
+        <span class="feature-tag">8.7/10 Rating</span>
+      </div>
+      <p>25km from Ijen Crater (~45 min drive). Foothills of Ijen plateau, surrounded by plantations. Best comfort/price for post-trek recovery. Traveloka showing up to 40% off.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/jiwa-jawa-resort-ijen.html" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://www.agoda.com/jiwa-jawa-resort-ijen/hotel/banyuwangi-id.html" target="_blank" class="book-btn secondary">Agoda</a>
+        <a href="https://www.klook.com/hotels/detail/587330-jiwa-jawa-resort-ijen/" target="_blank" class="book-btn secondary">Klook</a>
+      </div>
+    </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4>Ijen Resort & Villas</h4>
+        <span class="price">$66-130 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">Pool + Spa</span>
+        <span class="feature-tag">Renovated 2023</span>
+        <span class="feature-tag">Rice Terrace Views</span>
+        <span class="feature-tag">Volcanic Backdrop</span>
+        <span class="feature-tag">8.7/10 Rating</span>
+      </div>
+      <p>25km from crater. More resort-like feel, stunning grounds with koi ponds. Cheapest on Thu/Tue.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/ijen-resort-and-villas.html" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g317103-d625058-Reviews-Ijen_Resort_Villas-Banyuwangi_East_Java_Java.html" target="_blank" class="book-btn secondary">TripAdvisor</a>
+      </div>
+    </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4>Bobocabin Kawah Ijen</h4>
+        <span class="price">$58-67 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">Modern Cabins</span>
+        <span class="feature-tag">6 Min Walk to Crater</span>
+        <span class="feature-tag">34% Off Showing</span>
+        <span class="feature-tag">Clean + New</span>
+      </div>
+      <p>Ultra-close to Ijen. Pod/cabin-style — modern and clean but not a traditional resort. Budget-friendly.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/bobocabin-ijen-banyuwangi.html" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://bobobox.com/bobocabin/jawa-timur/bobocabin-kawah-ijen-banyuwangi-1055/" target="_blank" class="book-btn secondary">Official Site</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BROMO -->
+  <h3 style="color:var(--accent);margin:28px 0 16px;font-size:1.1em;">Mount Bromo — April 12 (1 night) <span class="status optional">Optional</span></h3>
+  <p style="color:var(--text-dim);margin-bottom:16px;font-size:0.9em;">Only if doing the sunrise jeep tour. Skip this to go direct to Surabaya.</p>
+
+  <div class="option-grid">
+    <div class="option">
+      <div class="option-header">
+        <h4>Jiwa Jawa Resort Bromo</h4>
+        <span class="price">$197-266 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">2,000m Elevation</span>
+        <span class="feature-tag">Breakfast Included</span>
+        <span class="feature-tag">Mountain Views</span>
+        <span class="feature-tag">Premium</span>
+      </div>
+      <p>Same brand as Ijen property. Consistently good quality. Pricier than expected.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/jiwa-jawa-resort-bromo.html" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://www.agoda.com/jiwa-jawa-resort-bromo/hotel/bromo-id.html" target="_blank" class="book-btn secondary">Agoda</a>
+      </div>
+    </div>
+
+    <div class="option recommended">
+      <div class="option-header">
+        <h4>Lava View Lodge</h4>
+        <span class="price">$73-106 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">On Crater Rim</span>
+        <span class="feature-tag">Direct Bromo Views</span>
+        <span class="feature-tag">Breakfast Buffet</span>
+        <span class="feature-tag">Iconic Location</span>
+      </div>
+      <p>Steps from the crater rim — see Bromo + 2 other volcanoes from the property. Rooms dated (1970s decor) but the location is unbeatable. Bring layers, it's cold.</p>
+      <div class="book-links">
+        <a href="https://www.agoda.com/lava-view-lodge/hotel/bromo-id.html" target="_blank" class="book-btn primary">Agoda</a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g1144644-d729568-Reviews-Lava_View_Lodge_Hotel-Probolinggo_East_Java_Java.html" target="_blank" class="book-btn secondary">TripAdvisor</a>
+      </div>
+    </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4>Cemara Indah / Cafe Lava</h4>
+        <span class="price">$30-55 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">Budget</span>
+        <span class="feature-tag">Cemoro Lawang</span>
+        <span class="feature-tag">Hot Water</span>
+        <span class="feature-tag">Sea of Sand Views</span>
+      </div>
+      <p>Basic but does the job for one night. You're there for the sunrise, not the thread count.</p>
+      <div class="book-links">
+        <a href="https://www.traveloka.com/en-en/hotel/indonesia/cafe-lava-hostel-3000020009667" target="_blank" class="book-btn primary">Traveloka</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SURABAYA -->
+  <h3 style="color:var(--accent);margin:28px 0 16px;font-size:1.1em;">Surabaya — April 13-15 (3-4 nights)</h3>
+  <p style="color:var(--text-dim);margin-bottom:16px;font-size:0.9em;">Central location. Archival services at Jl. Jagir Wonokromo (~15-20 min by Grab from all options).</p>
+
+  <div class="option-grid">
+    <div class="option recommended">
+      <div class="option-header">
+        <h4>Kampi Hotel Tunjungan</h4>
+        <span class="price">$43-46 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">4.8/5 Rating</span>
+        <span class="feature-tag">Great Breakfast</span>
+        <span class="feature-tag">Spa</span>
+        <span class="feature-tag">Gym</span>
+        <span class="feature-tag">Central</span>
+        <span class="feature-tag">50% Off on Tiket.com</span>
+      </div>
+      <p>Punches way above its weight. Outstanding reviews for a 3-star. Saves $100-200 vs Sheraton over 3-4 nights. 3 nights = ~$130 AUD total.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/kampi-surabaya.html" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g297715-d15327001-Reviews-Kampi_Hotel_Tunjungan-Surabaya_East_Java_Java.html" target="_blank" class="book-btn secondary">TripAdvisor</a>
+      </div>
+    </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4>Four Points by Sheraton</h4>
+        <span class="price">$109-153 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">4-Star Marriott</span>
+        <span class="feature-tag">Pool</span>
+        <span class="feature-tag">Gym</span>
+        <span class="feature-tag">Attached to Mall</span>
+        <span class="feature-tag">2 Restaurants</span>
+      </div>
+      <p>International brand reliability. Connected to Tunjungan Plaza shopping mall. 3 nights = ~$327-459 AUD total.</p>
+      <div class="book-links">
+        <a href="https://www.marriott.com/en-us/hotels/subfp-four-points-surabaya-tunjungan-plaza/overview/" target="_blank" class="book-btn primary">Marriott.com</a>
+        <a href="https://www.booking.com/hotel/id/four-points-by-sheraton-surabaya.html" target="_blank" class="book-btn secondary">Booking.com</a>
+      </div>
+    </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4>Grand Inna Tunjungan</h4>
+        <span class="price">$40-50 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">Heritage 4-Star</span>
+        <span class="feature-tag">Indoor + Outdoor Pool</span>
+        <span class="feature-tag">Spa</span>
+        <span class="feature-tag">119 Rooms</span>
+        <span class="feature-tag">Cheapest 4-Star</span>
+      </div>
+      <p>Historic building with character. Pool and spa at this price is strong value. Slightly more dated than Kampi.</p>
+      <div class="book-links">
+        <a href="https://www.traveloka.com/en-en/hotel/indonesia/grand-inna-tunjungan-2000000218475" target="_blank" class="book-btn primary">Traveloka</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEG 2 -->
+<div class="section" id="leg2">
+  <div class="section-header">
+    <span class="leg-badge leg2">Leg 2</span>
+    <h2>Wedding Week — Apr 16-25</h2>
+  </div>
+
+  <div class="card">
+    <h3>Theanna Eco Villa — Kirana 2BR Private Pool Villa <span class="status booked">Booked</span></h3>
+    <table>
+      <tr><td><strong>Dates</strong></td><td>April 16-21 (5 nights)</td></tr>
+      <tr><td><strong>Rate</strong></td><td>Best Deal rate, breakfast included</td></tr>
+      <tr><td><strong>Address</strong></td><td>Jl. Pantai Batu Bolong No. 25A, Canggu</td></tr>
+      <tr><td><strong>Features</strong></td><td>2BR, private pool, semi-outdoor shower, spa access, free shuttle, free bikes</td></tr>
+      <tr><td><strong>Distance</strong></td><td>2 min walk to Holiday Inn (same street!)</td></tr>
+    </table>
+    <div class="book-links" style="margin-top:12px">
+      <a href="https://www.theannavilla.com/room/two-bedroom-villa/" target="_blank" class="book-btn secondary">Theanna Website</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Holiday Inn Resort Bali Canggu <span class="status booked">Booked</span></h3>
+    <table>
+      <tr><td><strong>Dates</strong></td><td>April 21-25 (4 nights)</td></tr>
+      <tr><td><strong>Rooms</strong></td><td>2 separate rooms (~$200/night each = ~$800/person)</td></tr>
+      <tr><td><strong>Address</strong></td><td>Jl. Pantai Batu Bolong No.93, Canggu</td></tr>
+      <tr><td><strong>Beach</strong></td><td>4-min walk from Batu Bolong Beach</td></tr>
+      <tr><td><strong>Deposit</strong></td><td>~$90 AUD on arrival (refunded within 14 days)</td></tr>
+    </table>
+    <div class="book-links" style="margin-top:12px">
+      <a href="https://www.ihg.com/holidayinnresorts/hotels/us/en/bali/dpsba/hoteldetail" target="_blank" class="book-btn secondary">Holiday Inn Website</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Wedding Week Schedule</h3>
+    <table>
+      <thead><tr><th>Date</th><th>What</th></tr></thead>
+      <tbody>
+        <tr><td>Apr 16</td><td>Fly in from Surabaya, check into Theanna, Dom's birthday</td></tr>
+        <tr><td>Apr 17-19</td><td>Pre-wedding prep, explore Canggu, rehearsal dinner, relax at villa</td></tr>
+        <tr><td><strong>Apr 20</strong></td><td><strong>WEDDING DAY</strong> — Belly's wedding near Canggu</td></tr>
+        <tr><td>Apr 21</td><td>Check out Theanna &rarr; Check into Holiday Inn (2 rooms)</td></tr>
+        <tr><td>Apr 22-24</td><td>Post-wedding recovery. Beach, pool, chill</td></tr>
+        <tr><td>Apr 25</td><td>Check out &rarr; Head to Uluwatu</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Wedding Gear Storage</h3>
+    <table>
+      <tr><td><strong>Facility</strong></td><td>Bali Safe Storage — Canggu</td></tr>
+      <tr><td><strong>Address</strong></td><td>Jl. Raya Canggu No.165, Canggu</td></tr>
+      <tr><td><strong>Duration</strong></td><td>April 9-16 (7 days)</td></tr>
+      <tr><td><strong>Est. Cost</strong></td><td>~$40-75 AUD</td></tr>
+      <tr><td><strong>Contact</strong></td><td>WhatsApp: +62 811-3806-911 | info@balisafestorage.id</td></tr>
+    </table>
+    <div class="book-links" style="margin-top:12px">
+      <a href="https://www.balisafestorage.id/" target="_blank" class="book-btn primary">Website</a>
+    </div>
+  </div>
+</div>
+
+<!-- LEG 3 -->
+<div class="section" id="leg3">
+  <div class="section-header">
+    <span class="leg-badge leg3">Leg 3</span>
+    <h2>Post-Wedding — Apr 25 to May 10</h2>
+  </div>
+
+  <div class="card">
+    <h3>Uluwatu — Apr 25-27 (2 nights, with Buddha) <span class="status unbooked">Not Booked</span></h3>
+    <ul>
+      <li>Head to Bukit Peninsula after Holiday Inn checkout</li>
+      <li>Surf, dramatic cliffs, Kecak fire dance at sunset</li>
+      <li>Beach clubs (Single Fin, Sundays Beach Club)</li>
+      <li><strong>Need:</strong> 2-person accommodation, 2 nights</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Canggu / Seminyak — Apr 27-29 (2 nights, with Buddha) <span class="status unbooked">Not Booked</span></h3>
+    <ul>
+      <li>Last couple of days together</li>
+      <li>Chill, eat, drink</li>
+      <li><strong>Need:</strong> 2-person accommodation, 2 nights</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>April 29 — Buddha Flies Home to Brisbane</h3>
+    <p style="color:var(--text-dim)">Dom continues solo from here.</p>
+  </div>
+</div>
+
+<!-- FLORES -->
+<div class="section" id="flores">
+  <div class="section-header">
+    <h2>Dom's Solo Flores Heritage Trip — Apr 29 to May 10</h2>
+  </div>
+
+  <div class="info-box tip">
+    <strong>This section is Dom-only.</strong> Buddha, you're on a plane home by now. But have a read if you're curious about the family history adventure!
+  </div>
+
+  <div class="card">
+    <h3>The Mission</h3>
+    <p>Tracing the roots of <strong>James Peter Subtino Solien ("Jimmy Malay")</strong> — Dom's ancestor, a maritime trader who likely originated from eastern Flores (Larantuka/Sikka area). Looking for connections in the old Portuguese-indigenous Catholic communities.</p>
+  </div>
+
+  <div class="card">
+    <table>
+      <thead><tr><th>Dates</th><th>Destination</th><th>Nights</th><th>What</th></tr></thead>
+      <tbody>
+        <tr><td>Apr 29</td><td>Fly Bali &rarr; Maumere</td><td>—</td><td>~2hr flight</td></tr>
+        <tr><td>Apr 29 - May 1</td><td>Maumere & Sikka</td><td>2</td><td>Sikka cathedral (1600s), weaving villages, ask about Solien surname</td></tr>
+        <tr><td>May 1-3</td><td>Larantuka</td><td>2</td><td>Portuguese cathedral, Catholic heritage, sandalwood trading port</td></tr>
+        <tr><td>May 3-5</td><td>Solor & Adonara Islands</td><td>2</td><td>Portuguese fortress ruins, remote Catholic villages</td></tr>
+        <tr><td>May 5-6</td><td>Back to Maumere</td><td>1</td><td>Travel day</td></tr>
+        <tr><td>May 6</td><td>Fly Maumere &rarr; Bali</td><td>—</td><td>~2hr flight</td></tr>
+        <tr><td>May 6-9</td><td>Bali</td><td>3</td><td>Decompress, beach, prep for home</td></tr>
+        <tr><td>May 10</td><td>DPS &rarr; BNE 3:15pm</td><td>—</td><td>Home</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Flores Budget (solo)</h3>
+    <table>
+      <tr><td>Flights Bali &harr; Maumere</td><td>$160-300 AUD</td></tr>
+      <tr><td>Accommodation (12 nights)</td><td>$350-600 AUD</td></tr>
+      <tr><td>Transport (drivers, ferries)</td><td>$150-250 AUD</td></tr>
+      <tr><td>Food ($30/day)</td><td>$360 AUD</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>$1,020-1,510 AUD</strong></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- BUDGET -->
+<div class="section" id="budget">
+  <div class="section-header">
+    <h2>Budget Summary</h2>
+  </div>
+
+  <p style="color:var(--text-dim);margin-bottom:16px;">Per person, in AUD. Accommodation split between Dom & Buddha (except Holiday Inn = own rooms).</p>
+
+  <div class="card">
+    <h3>Leg 1: Java Adventure (Apr 9-16)</h3>
+    <table>
+      <thead><tr><th>Item</th><th>Cost (AUD)</th></tr></thead>
+      <tbody>
+        <tr><td>1 night Canggu villa (split)</td><td>$50-75</td></tr>
+        <tr><td>2 nights Ijen area</td><td>$120-225</td></tr>
+        <tr><td>1 night Bromo (optional)</td><td>$35-130</td></tr>
+        <tr><td>3-4 nights Surabaya</td><td>$65-220</td></tr>
+        <tr><td>Transport (driver + ferry + flight)</td><td>$85-145</td></tr>
+        <tr><td>Activities (Ijen + Bromo)</td><td>$75-120</td></tr>
+        <tr><td><strong>Subtotal</strong></td><td><strong>$430-915</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Leg 2: Wedding Week (Apr 16-25)</h3>
+    <table>
+      <thead><tr><th>Item</th><th>Cost (AUD)</th></tr></thead>
+      <tbody>
+        <tr><td>Theanna Kirana 5 nights (split)</td><td>$875-1,250</td></tr>
+        <tr><td>Holiday Inn 4 nights (own room)</td><td>$800</td></tr>
+        <tr><td><strong>Subtotal</strong></td><td><strong>$1,675-2,050</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Food & Misc (17 days together)</h3>
+    <p style="color:var(--text-dim);">17 days @ $30-45/day = <strong>$510-765 AUD</strong></p>
+  </div>
+
+  <div class="budget-total">
+    <div class="amount">$2,850 - $4,000</div>
+    <div class="label">Estimated total per person (Apr 9-25, Legs 1+2)</div>
+    <div class="label" style="margin-top:8px;font-size:0.8em;">Excludes: international flights, wedding costs, insurance ($242 paid), post-Apr 25 accommodation</div>
+  </div>
+</div>
+
+<!-- TRANSPORT -->
+<div class="section" id="transport">
+  <div class="section-header">
+    <h2>Transport Guide</h2>
+  </div>
+
+  <div class="card">
+    <h3>Bali &rarr; Java (Ferry)</h3>
+    <table>
+      <tr><td><strong>Route</strong></td><td>Gilimanuk (Bali) &rarr; Ketapang (Java)</td></tr>
+      <tr><td><strong>Duration</strong></td><td>30-45 minutes</td></tr>
+      <tr><td><strong>Frequency</strong></td><td>Every 15-30 min, 24/7</td></tr>
+      <tr><td><strong>Cost</strong></td><td>~$0.60 AUD per person</td></tr>
+      <tr><td><strong>Tip</strong></td><td>Buy tickets from roadside kiosks BEFORE terminal</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Canggu &rarr; Gilimanuk (Apr 10)</h3>
+    <table>
+      <tr><td><strong>Best option</strong></td><td>Private car + driver</td></tr>
+      <tr><td><strong>Duration</strong></td><td>~3.5-4 hours</td></tr>
+      <tr><td><strong>Cost</strong></td><td>~$77 AUD total ($38.50 each)</td></tr>
+      <tr><td><strong>Book via</strong></td><td>Hotel reception night before</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Banyuwangi &rarr; Surabaya</h3>
+    <table>
+      <thead><tr><th>Option</th><th>Duration</th><th>Cost (AUD)</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Train</strong></td><td>5-7 hours</td><td>$6-35</td><td>Mutiara Timur, scenic, recommended</td></tr>
+        <tr><td>Bus</td><td>6-8 hours</td><td>$8-30</td><td>DAMRI</td></tr>
+        <tr><td>Shuttle</td><td>4 hours</td><td>~$20</td><td>Fastest, door-to-door</td></tr>
+      </tbody>
+    </table>
+    <div class="book-links" style="margin-top:12px">
+      <a href="https://12go.asia" target="_blank" class="book-btn secondary">12go.asia — Trains & Buses</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Local Transport in Bali & Java</h3>
+    <ul>
+      <li><strong>Grab / Gojek</strong> — the Uber of SE Asia. Download both apps. Use for all rides.</li>
+      <li>No scooter rentals (no QLD motorcycle licence)</li>
+      <li>Cash for ferries and rural areas. ATMs limited in mountain areas.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SIM -->
+<div class="section" id="sim">
+  <div class="section-header">
+    <h2>SIM Card Plan</h2>
+  </div>
+
+  <div class="card">
+    <h3>Phase 1: eSIM (before departure)</h3>
+    <table>
+      <tr><td><strong>Provider</strong></td><td>Jetpac eSIM — 5GB / 30 days</td></tr>
+      <tr><td><strong>Network</strong></td><td>Telkomsel (best coverage in Indonesia)</td></tr>
+      <tr><td><strong>Cost</strong></td><td>~$14 AUD</td></tr>
+      <tr><td><strong>Setup</strong></td><td>Download Jetpac app in Brisbane, buy & activate before boarding</td></tr>
+      <tr><td><strong>Purpose</strong></td><td>Instant connectivity on landing — maps, Grab/Gojek, WhatsApp</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Phase 2: Local SIM (Day 1-2 in Canggu)</h3>
+    <table>
+      <tr><td><strong>Provider</strong></td><td>Telkomsel — Regular SIMPATI prepaid (NOT tourist SIM)</td></tr>
+      <tr><td><strong>Buy at</strong></td><td>GraPARI store or Indomaret in Canggu</td></tr>
+      <tr><td><strong>What to do</strong></td><td>Bring passport. Buy starter SIM (~$2-5 AUD). Open MyTelkomsel app, buy biggest data bundle (150GB+, ~$15-20 AUD)</td></tr>
+      <tr><td><strong>Coverage</strong></td><td>Bali, East Java, AND remote Flores/Larantuka</td></tr>
+    </table>
+    <div class="info-box tip" style="margin-top:12px">
+      <strong>Why not tourist SIM?</strong> Tourist SIM = 25GB for $14. Regular SIMPATI + app bundle = 150GB+ for $20-25. No contest.
+    </div>
+  </div>
+
+  <div class="budget-total" style="border-color:var(--accent3)">
+    <div class="amount" style="color:var(--accent3)">~$35-40 AUD</div>
+    <div class="label">Total phone cost for 31 days — 155GB+ data</div>
+  </div>
+</div>
+
+<!-- PACKING -->
+<div class="section" id="packing">
+  <div class="section-header">
+    <h2>Packing List — Ijen & Bromo</h2>
+  </div>
+
+  <div class="card">
+    <div class="pack-grid">
+      <div class="pack-item">Warm jacket / fleece</div>
+      <div class="pack-item">Long pants</div>
+      <div class="pack-item">Sturdy hiking shoes</div>
+      <div class="pack-item">Headlamp / flashlight</div>
+      <div class="pack-item">Bandana / buff (sulfur backup)</div>
+      <div class="pack-item">Gloves (optional, cold)</div>
+      <div class="pack-item">Rain jacket</div>
+      <div class="pack-item">Camera (good low-light)</div>
+      <div class="pack-item">Snacks and water</div>
+      <div class="pack-item">Cash (ATMs limited)</div>
+      <div class="pack-item">Passport (for SIM purchase)</div>
+      <div class="pack-item">Travel insurance docs</div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKLIST -->
+<div class="section" id="checklist">
+  <div class="section-header">
+    <h2>Booking Checklist</h2>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:16px">Booked</h3>
+    <div class="checklist-item">
+      <div class="check done"></div>
+      <span class="checklist-text done-text">Flights BNE &rarr; DPS (Virgin VA45, Apr 9)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check done"></div>
+      <span class="checklist-text done-text">Flight SUB &rarr; DPS (Garuda, Apr 16, $150 both)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check done"></div>
+      <span class="checklist-text done-text">Flight DPS &rarr; BNE (Virgin, May 10)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check done"></div>
+      <span class="checklist-text done-text">Theanna Kirana 2BR Villa (Apr 16-21, 5 nights, breakfast included)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check done"></div>
+      <span class="checklist-text done-text">Holiday Inn Canggu — 2 rooms (Apr 21-25, 4 nights)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check done"></div>
+      <span class="checklist-text done-text">Allianz Travel Insurance ($242 AUD)</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom:16px">Still Need to Book</h3>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Wedding gear storage — Bali Safe Storage Canggu (WhatsApp +62 811-3806-911)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Canggu villa — April 9 (1 night, 2BR)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Ijen area hotel — April 10-11 (2 nights)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Mount Bromo hotel — April 12 (1 night, optional)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Surabaya hotel — April 12/13-15 (3-4 nights)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Canggu &rarr; Gilimanuk private driver (Apr 10)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Uluwatu accommodation — April 25-27 (2 nights)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Canggu/Seminyak accommodation — April 27-29 (2 nights)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Buy Jetpac eSIM via app (before departure)</span>
+    </div>
+    <div class="checklist-item">
+      <div class="check"></div>
+      <span class="checklist-text">Buy Telkomsel SIMPATI SIM + data bundle (Day 1-2 in Canggu)</span>
+    </div>
+  </div>
+</div>
+
+<!-- USEFUL LINKS -->
+<div class="section">
+  <div class="section-header">
+    <h2>Useful Links</h2>
+  </div>
+  <div class="card">
+    <table>
+      <tr><td><a href="https://www.traveloka.com" target="_blank" style="color:var(--accent)">Traveloka</a></td><td>Flights & hotels (best for Indonesia domestic)</td></tr>
+      <tr><td><a href="https://12go.asia" target="_blank" style="color:var(--accent)">12go.asia</a></td><td>Trains & buses</td></tr>
+      <tr><td><a href="https://www.balisafestorage.id/" target="_blank" style="color:var(--accent)">Bali Safe Storage</a></td><td>Wedding gear storage</td></tr>
+      <tr><td><a href="https://ijenbromotours.com/" target="_blank" style="color:var(--accent)">Ijen Bromo Tours</a></td><td>Organised tour packages</td></tr>
+      <tr><td><a href="https://www.booking.com" target="_blank" style="color:var(--accent)">Booking.com</a></td><td>Hotel bookings</td></tr>
+      <tr><td><a href="https://www.skyscanner.com" target="_blank" style="color:var(--accent)">Skyscanner</a></td><td>Flight comparison</td></tr>
+    </table>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<div class="footer">
+  <p>Last updated: March 14, 2026</p>
+  <p style="margin-top:4px">Built by Saul &middot; Dom & Buddha's Bali Trip 2026</p>
+</div>
+
+</body>
+</html>
