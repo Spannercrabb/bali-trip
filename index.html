@@ -324,6 +324,22 @@
     letter-spacing: 0.5px;
   }
 
+  .tier-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .tier-badge.budget { background: rgba(0,212,170,0.15); color: var(--accent); border: 1px solid var(--accent); }
+  .tier-badge.mid { background: rgba(108,92,231,0.15); color: var(--accent4); border: 1px solid var(--accent4); }
+  .tier-badge.splurge { background: rgba(255,217,61,0.15); color: var(--accent3); border: 1px solid var(--accent3); }
+
   .option-header {
     display: flex;
     justify-content: space-between;
@@ -916,7 +932,7 @@
   <div class="option-grid">
     <div class="option recommended">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/jiwa-jawa-resort-ijen.html?checkin=2026-04-10&checkout=2026-04-12&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Jiwa Jawa Resort Ijen</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/jiwa-jawa-resort-ijen.html?checkin=2026-04-10&checkout=2026-04-12&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Jiwa Jawa Resort Ijen</a> <span class="tier-badge splurge">Splurge</span></h4>
         <span class="price">$104-164 /night</span>
       </div>
       <div class="features">
@@ -937,7 +953,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/ijen-resort-and-villas.html?checkin=2026-04-10&checkout=2026-04-12&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Ijen Resort & Villas</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/ijen-resort-and-villas.html?checkin=2026-04-10&checkout=2026-04-12&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Ijen Resort & Villas</a> <span class="tier-badge mid">Mid-Range</span></h4>
         <span class="price">$66-130 /night</span>
       </div>
       <div class="features">
@@ -957,7 +973,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/bobocabin-ijen-banyuwangi.html?checkin=2026-04-10&checkout=2026-04-12&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Bobocabin Kawah Ijen</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/bobocabin-ijen-banyuwangi.html?checkin=2026-04-10&checkout=2026-04-12&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Bobocabin Kawah Ijen</a> <span class="tier-badge budget">Budget</span></h4>
         <span class="price">$58-67 /night</span>
       </div>
       <div class="features">
@@ -982,7 +998,7 @@
   <div class="option-grid">
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/jiwa-jawa-resort-bromo.html?checkin=2026-04-12&checkout=2026-04-13&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Jiwa Jawa Resort Bromo</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/jiwa-jawa-resort-bromo.html?checkin=2026-04-12&checkout=2026-04-13&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Jiwa Jawa Resort Bromo</a> <span class="tier-badge splurge">Splurge</span></h4>
         <span class="price">$197-266 /night</span>
       </div>
       <div class="features">
@@ -1001,7 +1017,7 @@
 
     <div class="option recommended">
       <div class="option-header">
-        <h4><a href="https://www.agoda.com/lava-view-lodge/hotel/bromo-id.html?checkIn=2026-04-12&checkOut=2026-04-13&adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Lava View Lodge</a></h4>
+        <h4><a href="https://www.agoda.com/lava-view-lodge/hotel/bromo-id.html?checkIn=2026-04-12&checkOut=2026-04-13&adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Lava View Lodge</a> <span class="tier-badge mid">Mid-Range</span></h4>
         <span class="price">$73-106 /night</span>
       </div>
       <div class="features">
@@ -1020,7 +1036,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.traveloka.com/en-en/hotel/indonesia/cafe-lava-hostel-3000020009667" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Cemara Indah / Cafe Lava</a></h4>
+        <h4><a href="https://www.traveloka.com/en-en/hotel/indonesia/cafe-lava-hostel-3000020009667" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Cemara Indah / Cafe Lava</a> <span class="tier-badge budget">Budget</span></h4>
         <span class="price">$30-55 /night</span>
       </div>
       <div class="features">
@@ -1043,7 +1059,7 @@
   <div class="option-grid">
     <div class="option recommended">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/kampi-surabaya.html?checkin=2026-04-13&checkout=2026-04-16&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Kampi Hotel Tunjungan</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/kampi-surabaya.html?checkin=2026-04-13&checkout=2026-04-16&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Kampi Hotel Tunjungan</a> <span class="tier-badge budget">Budget</span></h4>
         <span class="price">$43-46 /night</span>
       </div>
       <div class="features">
@@ -1064,7 +1080,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.marriott.com/en-us/hotels/subfp-four-points-surabaya-tunjungan-plaza/overview/" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Four Points by Sheraton</a></h4>
+        <h4><a href="https://www.marriott.com/en-us/hotels/subfp-four-points-surabaya-tunjungan-plaza/overview/" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Four Points by Sheraton</a> <span class="tier-badge splurge">Splurge</span></h4>
         <span class="price">$109-153 /night</span>
       </div>
       <div class="features">
@@ -1084,7 +1100,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.traveloka.com/en-en/hotel/indonesia/grand-inna-tunjungan-2000000218475" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Grand Inna Tunjungan</a></h4>
+        <h4><a href="https://www.traveloka.com/en-en/hotel/indonesia/grand-inna-tunjungan-2000000218475" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Grand Inna Tunjungan</a> <span class="tier-badge mid">Mid-Range</span></h4>
         <span class="price">$40-50 /night</span>
       </div>
       <div class="features">
@@ -1219,7 +1235,7 @@
   <div class="option-grid">
     <div class="option recommended">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/mamo-uluwatu.html?checkin=2026-04-25&checkout=2026-04-27&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Mamo Hotel Uluwatu</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/mamo-uluwatu.html?checkin=2026-04-25&checkout=2026-04-27&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Mamo Hotel Uluwatu</a> <span class="tier-badge budget">Budget</span></h4>
         <span class="price">$45-60 /night</span>
       </div>
       <div class="features">
@@ -1239,7 +1255,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/dreamsea-bali.html?checkin=2026-04-25&checkout=2026-04-27&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Dreamsea Bali — Surf Camp</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/dreamsea-bali.html?checkin=2026-04-25&checkout=2026-04-27&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Dreamsea Bali — Surf Camp</a> <span class="tier-badge mid">Mid-Range</span></h4>
         <span class="price">$65-100 /night</span>
       </div>
       <div class="features">
@@ -1259,6 +1275,26 @@
         <a href="https://maps.google.com/?q=Dreamsea+Bali+Uluwatu+Pecatu" target="_blank" class="book-btn secondary">Google Maps</a>
       </div>
     </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4><a href="https://www.booking.com/hotel/id/radisson-blu-bali-uluwatu.html?checkin=2026-04-25&checkout=2026-04-27&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Radisson Blu Bali Uluwatu</a> <span class="tier-badge splurge">Splurge</span></h4>
+        <span class="price">$200-280 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">Twin Beds (Deluxe Ocean View)</span>
+        <span class="feature-tag">5-Star</span>
+        <span class="feature-tag">Clifftop Infinity Pool</span>
+        <span class="feature-tag">3 Bars + 2 Restaurants</span>
+        <span class="feature-tag">Full Spa</span>
+      </div>
+      <p>Proper 5-star clifftop resort. Deluxe Ocean View rooms (58 sqm) come in twin bed config with ocean views, separate shower + bathtub, coffee capsule machine, 400-thread-count linen. Infinity pool with cabanas, Filini Italian Grill, pool bar. The treat-yourself option.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/radisson-blu-bali-uluwatu.html?checkin=2026-04-25&checkout=2026-04-27&group_adults=2" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://www.agoda.com/en-au/radisson-blu-bali-uluwatu/hotel/bali-id.html?checkIn=2026-04-25&checkOut=2026-04-27&adults=2" target="_blank" class="book-btn secondary">Agoda</a>
+        <a href="https://maps.google.com/?q=Radisson+Blu+Bali+Uluwatu+Pecatu" target="_blank" class="book-btn secondary">Google Maps</a>
+      </div>
+    </div>
   </div>
 
   <!-- SEMINYAK -->
@@ -1275,7 +1311,7 @@
   <div class="option-grid">
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/dash-seminyak.html?checkin=2026-04-27&checkout=2026-04-29&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Viva Dash Hotel Seminyak</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/dash-seminyak.html?checkin=2026-04-27&checkout=2026-04-29&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Viva Dash Hotel Seminyak</a> <span class="tier-badge budget">Budget</span></h4>
         <span class="price">$50-70 /night</span>
       </div>
       <div class="features">
@@ -1294,7 +1330,7 @@
 
     <div class="option recommended">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/ize-seminyak.html?checkin=2026-04-27&checkout=2026-04-29&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">IZE Seminyak</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/ize-seminyak.html?checkin=2026-04-27&checkout=2026-04-29&group_adults=2" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">IZE Seminyak</a> <span class="tier-badge mid">Mid-Range</span></h4>
         <span class="price">$80-110 /night</span>
       </div>
       <div class="features">
@@ -1314,7 +1350,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.hyatt.com/jdv-by-hyatt/en-US/dpsat-kleo-seminyak" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">KLEO Seminyak (Hyatt)</a></h4>
+        <h4><a href="https://www.hyatt.com/jdv-by-hyatt/en-US/dpsat-kleo-seminyak" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">KLEO Seminyak (Hyatt)</a> <span class="tier-badge splurge">Splurge</span></h4>
         <span class="price">$155-220 /night</span>
       </div>
       <div class="features">
@@ -1379,7 +1415,7 @@
   <div class="option-grid">
     <div class="option recommended">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/sylvia-maumere.html?checkin=2026-04-29&checkout=2026-05-01&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Sylvia Hotel Maumere</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/sylvia-maumere.html?checkin=2026-04-29&checkout=2026-05-01&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Sylvia Hotel Maumere</a> <span class="tier-badge mid">Mid-Range</span></h4>
         <span class="price">$40-45 /night</span>
       </div>
       <div class="features">
@@ -1399,7 +1435,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.tripadvisor.com/Hotel_Review-g676343-d5123035-Reviews-Budi_Sun_Resort-Maumere_Flores_East_Nusa_Tenggara.html" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Budi Sun Resort</a></h4>
+        <h4><a href="https://www.tripadvisor.com/Hotel_Review-g676343-d5123035-Reviews-Budi_Sun_Resort-Maumere_Flores_East_Nusa_Tenggara.html" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Budi Sun Resort</a> <span class="tier-badge splurge">Splurge</span></h4>
         <span class="price">$42-105 /night</span>
       </div>
       <div class="features">
@@ -1413,6 +1449,26 @@
         <a href="https://maps.google.com/?q=Budi+Sun+Resort+Maumere+Flores" target="_blank" class="book-btn secondary">Google Maps</a>
       </div>
     </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4><a href="https://www.booking.com/hotel/id/pantai-paris-homestay.html?checkin=2026-04-29&checkout=2026-05-01&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Pantai Paris Homestay</a> <span class="tier-badge budget">Budget</span></h4>
+        <span class="price">$15-25 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">Beachfront</span>
+        <span class="feature-tag">Breakfast Included</span>
+        <span class="feature-tag">AC</span>
+        <span class="feature-tag">7 Min from Airport</span>
+        <span class="feature-tag">Only 5 Rooms</span>
+      </div>
+      <p>Beachfront homestay on Wairhubing Beach run by Ibu Susi. Ocean view rooms with AC and private bathroom. Half the price of Sylvia. Supports local NGO. Book early — only 5 rooms.</p>
+      <div class="book-links">
+        <a href="https://www.booking.com/hotel/id/pantai-paris-homestay.html?checkin=2026-04-29&checkout=2026-05-01&group_adults=1" target="_blank" class="book-btn primary">Booking.com</a>
+        <a href="https://www.tripadvisor.com/Hotel_Review-g676343-d10447485-Reviews-Pantai_Paris_Homestay-Maumere_Flores_East_Nusa_Tenggara.html" target="_blank" class="book-btn secondary">TripAdvisor</a>
+        <a href="https://maps.google.com/?q=Pantai+Paris+Homestay+Maumere+Flores" target="_blank" class="book-btn secondary">Google Maps</a>
+      </div>
+    </div>
   </div>
 
   <!-- LARANTUKA -->
@@ -1422,7 +1478,7 @@
   <div class="option-grid">
     <div class="option recommended">
       <div class="option-header">
-        <h4><a href="https://www.tripadvisor.com/Hotel_Review-g800613-d3174508-Reviews-ASA_Hotel-Larantuka_Flores_East_Nusa_Tenggara.html" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">ASA Hotel & Restaurant</a></h4>
+        <h4><a href="https://www.tripadvisor.com/Hotel_Review-g800613-d3174508-Reviews-ASA_Hotel-Larantuka_Flores_East_Nusa_Tenggara.html" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">ASA Hotel & Restaurant</a> <span class="tier-badge mid">Mid-Range</span></h4>
         <span class="price">$25-35 /night</span>
       </div>
       <div class="features">
@@ -1440,7 +1496,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/larantuka-beach-apartments.html?checkin=2026-05-01&checkout=2026-05-03&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Larantuka Beach Apartments</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/larantuka-beach-apartments.html?checkin=2026-05-01&checkout=2026-05-03&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Larantuka Beach Apartments</a> <span class="tier-badge splurge">Splurge</span></h4>
         <span class="price">$38-44 /night</span>
       </div>
       <div class="features">
@@ -1452,6 +1508,24 @@
       <div class="book-links">
         <a href="https://www.booking.com/hotel/id/larantuka-beach-apartments.html?checkin=2026-05-01&checkout=2026-05-03&group_adults=1" target="_blank" class="book-btn primary">Booking.com</a>
         <a href="https://maps.google.com/?q=Larantuka+Beach+Apartments+Flores" target="_blank" class="book-btn secondary">Google Maps</a>
+      </div>
+    </div>
+
+    <div class="option">
+      <div class="option-header">
+        <h4><a href="https://www.tripadvisor.com/Hotel_Review-g800613-d8322303-Reviews-Hotel_Tresna-Larantuka_Flores_East_Nusa_Tenggara.html" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Hotel Tresna</a> <span class="tier-badge budget">Budget</span></h4>
+        <span class="price">$12-20 /night</span>
+      </div>
+      <div class="features">
+        <span class="feature-tag">Central Location</span>
+        <span class="feature-tag">Near Cathedral</span>
+        <span class="feature-tag">Night Market Next Door</span>
+        <span class="feature-tag">Cleanest Budget Option</span>
+      </div>
+      <p>Basic but the cleanest budget pick in Larantuka. Right near the cathedral and night market. Walk-in or WhatsApp booking — may not be on Booking.com. Popular with local business travellers.</p>
+      <div class="book-links">
+        <a href="https://www.tripadvisor.com/Hotel_Review-g800613-d8322303-Reviews-Hotel_Tresna-Larantuka_Flores_East_Nusa_Tenggara.html" target="_blank" class="book-btn primary">TripAdvisor</a>
+        <a href="https://maps.google.com/?q=Hotel+Tresna+Jl+Yos+Sudarso+Larantuka+Flores" target="_blank" class="book-btn secondary">Google Maps</a>
       </div>
     </div>
   </div>
@@ -1500,7 +1574,7 @@
   <div class="option-grid">
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/the-spare-room-bali-kabupaten-badung.html?checkin=2026-05-06&checkout=2026-05-09&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">The Spare Room — Canggu</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/the-spare-room-bali-kabupaten-badung.html?checkin=2026-05-06&checkout=2026-05-09&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">The Spare Room — Canggu</a> <span class="tier-badge splurge">Splurge</span></h4>
         <span class="price">~$81 /night</span>
       </div>
       <div class="features">
@@ -1518,7 +1592,7 @@
 
     <div class="option recommended">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/klumpu-bali-resort.html?checkin=2026-05-06&checkout=2026-05-09&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Klumpu Bali Resort — Sanur</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/klumpu-bali-resort.html?checkin=2026-05-06&checkout=2026-05-09&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Klumpu Bali Resort — Sanur</a> <span class="tier-badge mid">Mid-Range</span></h4>
         <span class="price">$55-70 /night</span>
       </div>
       <div class="features">
@@ -1538,7 +1612,7 @@
 
     <div class="option">
       <div class="option-header">
-        <h4><a href="https://www.booking.com/hotel/id/honeymoon-guesthouse.html?checkin=2026-05-06&checkout=2026-05-09&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Honeymoon Guesthouse — Ubud</a></h4>
+        <h4><a href="https://www.booking.com/hotel/id/honeymoon-guesthouse.html?checkin=2026-05-06&checkout=2026-05-09&group_adults=1" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--accent)">Honeymoon Guesthouse — Ubud</a> <span class="tier-badge budget">Budget</span></h4>
         <span class="price">$62-70 /night</span>
       </div>
       <div class="features">
